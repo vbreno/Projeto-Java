@@ -28,4 +28,17 @@ public class Cliente {
     public String getCpf() {
         return cpf;
     }
+
+    @Override
+    public String toString() {
+        return nome + "," + dataNascimento + "," + cpf;
+    }
+
+    public static Cliente fromString(String linha) {
+        String[] partes = linha.split(",");
+        if (partes.length != 3) {
+            throw new IllegalArgumentException("Formato da linha inválido: " + linha);
+        }
+        return new Cliente(partes[0], partes[1], partes[2]);
+    }
 }
