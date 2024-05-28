@@ -1,1 +1,3 @@
-carne de sol,003,40.0
+carne de sol,003,39.99
+batata frita,16,15.0,100,9
+bacon,002,31.0,40,10
